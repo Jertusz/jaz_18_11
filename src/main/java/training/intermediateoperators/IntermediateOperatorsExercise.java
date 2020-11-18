@@ -1,7 +1,5 @@
 package training.intermediateoperators;
 
-import javax.print.DocFlavor;
-import javax.sql.ConnectionPoolDataSource;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -40,7 +38,7 @@ public class IntermediateOperatorsExercise implements StreamIntermediateOperator
 
     @Override
     public Stream<Integer> staircase() {
-        List<Integer> staircase = IntStream.range(0, 6).flatMap(i -> IntStream.range(0, i+2)).boxed().collect(Collectors.toList());
+        List<Integer> staircase = IntStream.range(0, 6).flatMap(i -> IntStream.range(0, i + 2)).boxed().collect(Collectors.toList());
         return staircase.stream();
     }
 }
